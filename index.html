@@ -12,7 +12,7 @@ a{color:var(--teal)}.sans{font-family:Arial,Helvetica,sans-serif}.wrap{max-width
 header{background:var(--ink);color:#fff;position:relative;overflow:hidden}
 header:after{content:"";position:absolute;width:390px;height:390px;border:1px solid #ffffff25;border-radius:50%;right:-120px;top:-170px;box-shadow:0 0 0 35px #ffffff0b,0 0 0 75px #ffffff08}
 .nav{display:flex;justify-content:space-between;align-items:center;padding:18px 0;position:relative;z-index:2;font:12px Arial,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#e9d7b7}
-.hero{display:grid;grid-template-columns:1.05fr .95fr;gap:28px;align-items:center;padding:42px 0 62px;position:relative;z-index:1}
+.hero{display:grid;grid-template-columns:1.05fr .95fr;gap:28px;align-items:center;padding:42px 0 46px;position:relative;z-index:1}
 .kicker{font:700 11px Arial,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:#e3b86e}
 h1{font-size:clamp(42px,7vw,76px);line-height:.99;letter-spacing:-.045em;margin:16px 0 20px}
 .hero p{font-size:18px;color:#e4e8e8;max-width:520px}
@@ -20,6 +20,16 @@ h1{font-size:clamp(42px,7vw,76px);line-height:.99;letter-spacing:-.045em;margin:
 .hero-art{background:#e8d9c4;border-radius:12px;padding:10px;box-shadow:16px 16px 0 #a94f3840;border:1px solid #c8b99f;text-align:center}
 .hero-art img{display:block;width:100%;max-width:100%;height:auto;border-radius:8px;object-fit:cover;box-shadow:0 4px 12px rgba(0,0,0,0.15)}
 .stamp{display:inline-block;border:1px solid #d6a85f;padding:7px 12px;margin-top:10px;font:700 11px Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#f1d9a9}
+
+/* Player de Vídeo Acessível no Topo */
+.video-banner{background:#101f2b;border-top:1px solid #ffffff1a;padding:28px 0 36px;position:relative;z-index:2}
+.video-card{background:#1b3142;border:1px solid #d6a85f55;border-radius:12px;padding:18px;box-shadow:0 12px 28px rgba(0,0,0,0.28)}
+.video-header{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:10px;margin-bottom:14px}
+.video-badge{background:#d6a85f;color:#172b3a;font:700 10px Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase;padding:5px 10px;border-radius:4px}
+.video-title{font:700 16px Arial,sans-serif;color:#fff;margin:0}
+.video-sub{font:13px Arial,sans-serif;color:#cfd8dc;margin:4px 0 0}
+.video-player{width:100%;max-height:480px;border-radius:8px;background:#000;display:block;outline:none}
+
 nav.contents{display:flex;gap:9px;overflow-x:auto;padding:16px 0;white-space:nowrap;border-bottom:1px solid var(--line);font:12px Arial,sans-serif}
 nav.contents a{text-decoration:none;background:#eee6d9;color:var(--ink);padding:8px 12px;border-radius:30px}
 main{padding:20px 0 60px}section{padding:42px 0;border-bottom:1px solid var(--line);scroll-margin-top:20px}
@@ -41,10 +51,19 @@ table{width:100%;border-collapse:collapse;margin:18px 0;font:14px Arial,sans-ser
 ul{padding-left:22px}li{margin:7px 0}
 .quote{font-size:25px;line-height:1.35;color:#7d3f31;border-top:1px solid var(--gold);border-bottom:1px solid var(--gold);padding:23px 0;margin:28px 0}
 .sources li{font:13px Arial,sans-serif;overflow-wrap:anywhere}
+
+/* Cartões de Materiais Complementares (Slides + YouTube) */
+.media-hub{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin:24px 0}
+.media-box{background:#f3ecdf;border:1px solid #d6a85f;border-radius:10px;padding:24px;display:flex;flex-direction:column;justify-content:space-between}
+.media-box h3{margin:8px 0 10px;color:var(--ink)}
+.media-box p{font-size:15px;color:#344b57;margin-bottom:18px}
+.btn-yt{display:inline-block;background:#b71c1c;color:#fff;text-decoration:none;border-radius:30px;padding:12px 18px;font:700 12px Arial,sans-serif;text-align:center}
+.btn-ppt{display:inline-block;background:var(--teal);color:#fff;text-decoration:none;border-radius:30px;padding:12px 18px;font:700 12px Arial,sans-serif;text-align:center}
+
 footer{background:var(--ink);color:#dce3e3;padding:32px 0;font:12px Arial,sans-serif}
 .btn{display:inline-block;background:var(--rust);color:white;text-decoration:none;border:0;border-radius:30px;padding:12px 17px;font:700 12px Arial,sans-serif;cursor:pointer;margin:8px 6px 0 0}
-@media(max-width:700px){.hero{grid-template-columns:1fr;padding:28px 0 42px}.hero-art{max-width:420px;margin:0 auto}.grid{grid-template-columns:1fr}.wrap{padding:0 17px}.nav{font-size:10px}section{padding:32px 0}table{font-size:12px}td,th{padding:8px}}
-@media print{nav.contents,.btn{display:none}body{background:white}.hero{padding:20px 0}.card{break-inside:avoid}section{break-inside:avoid}}
+@media(max-width:700px){.hero,.media-hub{grid-template-columns:1fr}.hero{padding:28px 0 36px}.hero-art{max-width:420px;margin:0 auto}.grid{grid-template-columns:1fr}.wrap{padding:0 17px}.nav{font-size:10px}section{padding:32px 0}table{font-size:12px}td,th{padding:8px}}
+@media print{nav.contents,.btn,.video-banner,.media-hub{display:none}body{background:white}.hero{padding:20px 0}.card{break-inside:avoid}section{break-inside:avoid}}
 </style>
 </head>
 <body>
@@ -65,10 +84,30 @@ footer{background:var(--ink);color:#dce3e3;padding:32px 0;font:12px Arial,sans-s
    </div>
   </div>
  </div>
+
+ <!-- Bloco de Vídeo Acessível no Topo da Página -->
+ <div class="video-banner" id="video-intro">
+  <div class="wrap">
+   <div class="video-card">
+    <div class="video-header">
+     <div>
+      <h2 class="video-title">Resumo Audiovisual: A História de Enedina Alves Marques</h2>
+      <p class="video-sub">Recurso de acessibilidade audiovisual desenvolvido para apresentar a trajetória da engenheira logo no início da navegação.</p>
+     </div>
+     <span class="video-badge">Acessibilidade • Áudio e Vídeo</span>
+    </div>
+    <video class="video-player" controls preload="metadata" poster="enedina.jpg" aria-label="Vídeo resumo sobre a biografia e o legado de Enedina Alves Marques">
+     <source src="video_enedina.mp4" type="video/mp4">
+     Seu navegador não suporta a reprodução direta de vídeo MP4. <a href="video_enedina.mp4" style="color:#e3b86e">Clique aqui para baixar o vídeo</a>.
+    </video>
+   </div>
+  </div>
+ </div>
 </header>
+
 <div class="wrap">
 <nav class="contents" aria-label="Navegação do conteúdo">
-<a href="#origem">Origem</a><a href="#estudos">Formação</a><a href="#carreira">Carreira</a><a href="#barreiras">Barreiras</a><a href="#legado">Legado e Vida</a><a href="#algoritmos">Memória Digital</a><a href="#linha">Linha do tempo</a><a href="#fontes">Fontes</a>
+<a href="#origem">Origem</a><a href="#estudos">Formação</a><a href="#carreira">Carreira</a><a href="#barreiras">Barreiras</a><a href="#legado">Legado e Vida</a><a href="#algoritmos">Memória Digital</a><a href="#linha">Linha do tempo</a><a href="#materiais">Slides e Vídeo</a><a href="#fontes">Fontes</a>
 </nav>
 <main>
 <section id="origem">
@@ -140,7 +179,7 @@ footer{background:var(--ink);color:#dce3e3;padding:32px 0;font:12px Arial,sans-s
  </ul>
 
  <h3>Falecimento e a reação contra o apagamento na imprensa (1981)</h3>
- <p>Enedina faleceu em agosto de 1981, aos 68 anos, vítima de um <b>infarto</b> em seu apartamento no Centro de Curitiba</b>. Seu corpo foi encontrado no dia <b>27 de agosto</b> (data registrada no atestado de óbito),mas estima-se que a morte tenha ocorrido cerca de uma semana antes.</b>.</p>
+ <p>Enedina faleceu em agosto de 1981, aos 68 anos, vítima de um <b>infarto</b> em seu apartamento localizado na <b>Rua Ermelino de Leão, no Centro de Curitiba</b>. Seu corpo foi encontrado no dia <b>27 de agosto</b> (data registrada no atestado de óbito), mas, devido ao estado de decomposição, estima-se que a morte tenha ocorrido cerca de uma semana antes, por volta do dia <b>20 de agosto</b>.</p>
  <p>Na ocasião, o tabloide local <i>Diário Popular</i> noticiou o ocorrido retratando-a de forma reducionista como apenas uma "idosa excêntrica", ignorando sua trajetória histórica. A reportagem gerou imediata indignação entre os membros do <b>Instituto de Engenharia do Paraná (IEP)</b>, que se mobilizaram e publicaram artigos na imprensa ressaltando sua relevância técnica e pioneirismo na engenharia brasileira.</p>
 
  <div class="grid">
@@ -166,4 +205,54 @@ footer{background:var(--ink);color:#dce3e3;padding:32px 0;font:12px Arial,sans-s
   <div class="event"><div class="year">1945</div><b>Diploma de Engenharia Civil</b><p>Forma-se aos 32 anos no Palácio Avenida, tornando-se a primeira mulher negra engenheira do Brasil e a 1ª do Paraná.</p></div>
   <div class="event"><div class="year">1946–1947</div><b>Serviço Público e Transferência</b><p>Atua na Secretaria de Viação e é transferida pelo governador Moisés Lupion para o Depto. de Águas e Energia Elétrica.</p></div>
   <div class="event"><div class="year">1950–1955</div><b>Grandes Obras de Infraestrutura</b><p>Atua nos cálculos e fiscalização de Capivari-Cachoeira, no Colégio Estadual do Paraná e na Casa do Estudante (CEU).</p></div>
-  <div class="event"><div class="year">1961</div><b>Entrevista com Octávio Ianni</b><p>Entrevistada para a pesquisa da UNESCO publi
+  <div class="event"><div class="year">1961</div><b>Entrevista com Octávio Ianni</b><p>Entrevistada para a pesquisa da UNESCO publicada no livro <i>As Metamorfoses do Escravo</i>.</p></div>
+  <div class="event"><div class="year">1962</div><b>Aposentadoria Especial</b><p>Aposenta-se no governo Ney Braga com equiparação salarial de juiz de direito.</p></div>
+  <div class="event"><div class="year">1981</div><b>Falecimento e Mobilização do IEP</b><p>Morre aos 68 anos, vítima de infarto em seu apartamento no Centro de Curitiba (óbito estimado em 20 de agosto e registrado em 27 de agosto). Após nota reducionista do jornal <i>Diário Popular</i>, o Instituto de Engenharia do Paraná mobiliza a imprensa para resgatar seus feitos.</p></div>
+  <div class="event"><div class="year">2000–2006</div><b>Resgate Institucional</b><p>Homenageada no Memorial à Mulher (2000) e criação do Instituto de Mulheres Negras Enedina Alves Marques em Maringá (2006).</p></div>
+ </div>
+</section>
+
+<!-- Seção de Apresentação PowerPoint e Redirecionamento YouTube -->
+<section id="materiais">
+ <div class="eyebrow">08 · Recursos Complementares</div><h2>Apresentação em Slides e Documentário</h2>
+ <p class="lead">Acesse o material de apresentação elaborado pelo grupo e aprofunde seus estudos através do conteúdo audiovisual oficial no YouTube.</p>
+ <div class="media-hub">
+  <div class="media-box">
+   <div>
+    <div class="tag">Material de Estudo • Slides</div>
+    <h3>Apresentação em PowerPoint (.PPTX)</h3>
+    <p>Baixe os slides completos preparados pela equipe com o resumo visual, tópicos-chave e síntese da pesquisa sobre Enedina Alves Marques.</p>
+   </div>
+   <a class="btn-ppt" href="apresentacao_enedina.pptx" download>Baixar Apresentação (PowerPoint) ↓</a>
+  </div>
+  <div class="media-box">
+   <div>
+    <div class="tag">Conteúdo Externo • YouTube</div>
+    <h3>Vídeo Oficial no YouTube</h3>
+    <p>Quer assistir a mais conteúdos históricos e biográficos sobre a primeira engenheira negra do Brasil? Acesse o vídeo selecionado diretamente no YouTube.</p>
+   </div>
+   <a class="btn-yt" href="COLE_AQUI_O_LINK_DO_YOUTUBE" target="_blank" rel="noopener noreferrer">Assistir Vídeo Oficial no YouTube ↗</a>
+  </div>
+ </div>
+</section>
+
+<section id="fontes">
+ <div class="eyebrow">09 · Pesquisa</div><h2>Fontes e referências para aprofundar</h2>
+ <p>Este material reúne documentos institucionais, pesquisas sociológicas e artigos históricos. Para trabalhos escolares e acadêmicos, consulte:</p>
+ <ol class="sources">
+  <li><b>Ministério da Ciência, Tecnologia e Inovação (MCTI).</b> <a href="https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/lei-do-bem/paginas/reconhecimento-enedina-alves-marques">Reconhecimento Enedina Alves Marques</a>.</li>
+  <li><b>SANTANA, Jorge Luiz.</b> <i>Enedina Alves Marques: A trajetória da primeira engenheira negra do Brasil</i>. Curitiba: Pesquisa Historiográfica e Documental.</li>
+  <li><b>IANNI, Octávio.</b> <i>As Metamorfoses do Escravo</i>. São Paulo: Difusão Européia do Livro (Pesquisa UNESCO/USP, 1961/1962).</li>
+  <li><b>Instituto de Engenharia do Paraná (IEP).</b> Registros históricos e notas de homenagem à engenheira Enedina Alves Marques (1981).</li>
+  <li><b>Museu de Astronomia e Ciências Afins (MAST).</b> <a href="https://www.gov.br/mast/pt-br/assuntos/noticias/2025/marco/enedina-alves-marques">Enedina Alves Marques — minidocumentário e biografia</a>.</li>
+  <li><b>Colégio Estadual do Paraná (CEP).</b> <a href="https://www.cep.pr.gov.br/Noticia/Enedina-Alves-Marques-uma-mulher-frente-do-seu-tempo-foi-estudante-do-Ginasio-Paranaense">Enedina Alves Marques: uma mulher à frente do seu tempo</a>.</li>
+  <li><b>Universidade Federal do Paraná (UFPR).</b> Acervo histórico da Faculdade de Engenharia e trajetória dos ex-alunos (Turma de 1945).</li>
+  <li><b>Universidade Federal de São Paulo (UNIFESP).</b> <a href="https://cienciaecientistas.unifesp.br/cientistas/enedina-alves-marques">Ciência e Cientistas Brasileiros/as — Enedina Alves Marques</a>.</li>
+  <li><b>Instituto do Patrimônio Histórico e Artístico Nacional (IPHAN).</b> <a href="https://www.gov.br/iphan/pt-br/assuntos/noticias/exposicao-homenageia-primeira-engenheira-negra-do-brasil">Exposição homenageia primeira engenheira negra do Brasil</a>.</li>
+ </ol>
+ <a class="btn" href="#top">Voltar ao início ↑</a><button class="btn" onclick="window.print()">Imprimir / salvar em PDF</button>
+</section>
+</main>
+</div>
+<footer><div class="wrap"><b>ENEDINA ALVES MARQUES · 1913–1981</b><br>Material educativo unificado e expandido sobre a vida, obra e legado de Enedina Alves Marques.</div></footer>
+</body></html>
